@@ -1,0 +1,41 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-table-activity
+      author: Bhargavi
+      changes:
+        - createSequence:
+            sequenceName: S_ACTIVITY
+            cacheSize: 20
+        - createTable:
+            tableName: ACTIVITY
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: title
+                  type: VARCHAR(255)
+              - column:
+                  name: price
+                  type: DECIMAL(10,2)
+              - column:
+                  name: currency
+                  type: VARCHAR(16)
+              - column:
+                  name: rating
+                  type: DECIMAL(2,1)
+              - column:
+                  name: special_offer
+                  type: BOOLEAN
+              - column:
+                  name: supplier_id
+                  type: BIGINT
+
+        - addForeignKeyConstraint:
+            baseTableName: activity
+            baseColumnNames: supplier_id
+            referencedTableName: supplier
+            referencedColumnNames: id
+            constraintName: fk_activity_supplier

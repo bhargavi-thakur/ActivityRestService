@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - include: 
+      file: db/changelog/create-table-supplier.yaml
+  - include:
+      file: db/changelog/create-table-activity.yaml
+  - include:
+      file: db/changelog/insert-table-supplier.yaml
+  - include:
+      file: db/changelog/insert-table-activity.yaml

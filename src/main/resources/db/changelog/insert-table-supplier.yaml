@@ -1,0 +1,70 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-supplier-data
+      author: Bhargavi
+      changes:
+        - insert:
+            tableName: SUPPLIER
+            columns:
+              - column:
+                  name: id
+                  valueNumeric: 1
+              - column:
+                  name: name
+                  value: "John Doe"
+              - column:
+                  name: address
+                  value: "123 Main St"
+              - column:
+                  name: zip
+                  value: "10001"
+              - column:
+                  name: city
+                  value: "New York"
+              - column:
+                  name: country
+                  value: "USA"
+
+        - insert:
+            tableName: SUPPLIER
+            columns:
+              - column:
+                  name: id
+                  valueNumeric: 2
+              - column:
+                  name: name
+                  value: "Globex Inc"
+              - column:
+                  name: address
+                  value: "456 Market St"
+              - column:
+                  name: zip
+                  value: "94105"
+              - column:
+                  name: city
+                  value: "San Francisco"
+              - column:
+                  name: country
+                  value: "USA"
+
+        - insert:
+            tableName: SUPPLIER
+            columns:
+              - column:
+                  name: id
+                  valueNumeric: 3
+              - column:
+                  name: name
+                  value: "Initech"
+              - column:
+                  name: address
+                  value: "789 Business Rd"
+              - column:
+                  name: zip
+                  value: "60601"
+              - column:
+                  name: city
+                  value: "Chicago"
+              - column:
+                  name: country
+                  value: "USA"

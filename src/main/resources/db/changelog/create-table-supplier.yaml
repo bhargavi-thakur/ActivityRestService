@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-table-supplier
+      author: Bhargavi
+      changes:
+        - createTable:
+            tableName: SUPPLIER
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+              - column:
+                  name: address
+                  type: VARCHAR(255)
+              - column:
+                  name: zip
+                  type: VARCHAR(20)
+              - column:
+                  name: city
+                  type: VARCHAR(100)
+              - column:
+                  name: country
+                  type: VARCHAR(100)

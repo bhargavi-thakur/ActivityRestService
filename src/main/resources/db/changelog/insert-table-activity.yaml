@@ -1,0 +1,29 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-activity
+      author: Bhargavi
+      changes:
+        - insert:
+            tableName: ACTIVITY
+            columns:
+              - column:
+                  name: id
+                  valueNumeric: 100L
+              - column:
+                  name: title
+                  value: "Zurich Walking Tour"
+              - column:
+                  name: price
+                  valueNumeric: 62.56
+              - column:
+                  name: currency
+                  value: "$"
+              - column:
+                  name: rating
+                  valueNumeric: 4.8
+              - column:
+                  name: special_offer
+                  valueBoolean: true
+              - column:
+                  name: supplier_id
+                  valueNumeric: 1
